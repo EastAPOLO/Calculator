@@ -1,3 +1,4 @@
+#Calculator
 Welcome to the Calculator Program v2.0. This was made to implement the things I learned in Java, in the future there will be a GUI version.
 
 In order to run this open a terminal or command prompt and excecute
