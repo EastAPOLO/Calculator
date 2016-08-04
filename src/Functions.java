@@ -40,9 +40,9 @@ public class Functions {
 		this.mode = t.nextInt();
 		
 		if(this.mode == 0){
-			System.out.println("---------------------");
+			System.out.println("----------------------");
 			System.out.println("The program has ended");
-			System.out.println("---------------------");
+			System.out.println("----------------------");
 			System.exit(0);
 		}
 	}
