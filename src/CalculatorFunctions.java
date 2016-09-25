@@ -2,26 +2,26 @@ import java.util.Scanner;
 public class CalculatorFunctions {
 	Scanner t = new Scanner(System.in);
 	
-	int mode;
+	String mode;
 	int sum;
 	
 	public void math(int number1, int number2){
 		int answer = 0;
 		this.sum = answer;
 		
-		if(mode == 1){
+		if(mode.equals("+")){
 			answer = number1 + number2;
 		}
 		
-		if(mode == 2){
+		if(mode.equals("-")){
 			answer = number1 - number2;
 		}
 		
-		if(mode == 3){
+		if(mode.equals("*")){
 			answer = number1 * number2;
 		}
 		
-		if(mode == 4){
+		if(mode.equals("/")){
 			answer = number1 / number2;
 		}
 		System.out.println("The answer is " + answer);
@@ -31,15 +31,10 @@ public class CalculatorFunctions {
 	}
 	
 	public void operators(){
-		System.out.println("0 - (Exit Program)");
-		System.out.println("1 - (+)");
-		System.out.println("2 - (-)");
-		System.out.println("3 - (*)");
-		System.out.println("4 - (/)");
-		System.out.println("Please choose an operator or exit the program.");
-		this.mode = t.nextInt();
+		System.out.println("Please choose an operator or type exit to kill the program.");
+		this.mode = t.nextLine();
 		
-		if(this.mode == 0){
+		if(this.mode.equals("Exit") || this.mode.equals("exit")){
 			System.out.println("----------------------");
 			System.out.println("The program has ended");
 			System.out.println("----------------------");
@@ -54,22 +49,22 @@ public class CalculatorFunctions {
 			System.out.println("Please enter the second number aka");
 			int num3 = t.nextInt();
 			this.sum = total;
-			if(mode == 1){
+			if(mode.equals("+")){
 				total = sum + num3;
 				System.out.println("The answer is " + total);
 			}
 			
-			if(mode == 2){
+			if(mode.equals("-")){
 				total = sum - num3;
 				System.out.println("The answer is " + total);
 			}
 			
-			if(mode == 3){
+			if(mode.equals("*")){
 				total = sum * num3;
 				System.out.println("The answer is " + total);
 			}
 			
-			if(mode == 4){
+			if(mode.equals("/")){
 				total = sum / num3;
 				System.out.println("The answer is " + total);
 			}
